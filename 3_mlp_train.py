@@ -54,10 +54,10 @@ for train, _ in cross_validation.fold_iterator(family_data,cross_val=False):
         y_train=train['ref_proband_gtype']
 
         print(X_train.columns)
-        #clf.fit(X_train, y_train)
+        clf.fit(X_train, y_train)
 
-        #with open('MLP.pickle', 'wb') as f:
-        #    pickle.dump(clf, f)
+        with open('MLP.pickle', 'wb') as f:
+            pickle.dump(clf, f)
 
 
 
